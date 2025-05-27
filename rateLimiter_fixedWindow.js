@@ -45,7 +45,7 @@ const rateLimiter = async (req, res, next) => {
 app.use(rateLimiter);
 
 // sample route to check requests count
-app.get('/rateLimiters', async (req, res) => {
+app.get('/rateLimiterFixed', async (req, res) => {
     res.send(`Max no. of reqs per minute = 10 <br> Current number of requests: ${req.reqCount}`);
 });
 
